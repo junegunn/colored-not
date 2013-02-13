@@ -2,10 +2,16 @@ $VERBOSE = true
 
 require 'rubygems'
 require 'minitest/autorun'
-require 'colored/not'
 
 class TestColoredNot < MiniTest::Unit::TestCase
   def test_colored_not
+    assert_raises(LoadError) do
+      require 'colored/not'
+    end
+
+    require 'colored'
+    require 'colored/not'
+
     3.times do
       assert_equal "\e[31mred\e[0m", 'red'.red
       assert_equal "\e[41mred\e[0m", 'red'.on_red

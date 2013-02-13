@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "colored-not"
-  gem.version       = '1.2'
+  gem.version       = '1.2.1'
   gem.authors       = ["Junegunn Choi"]
   gem.email         = ["junegunn.c@gmail.com"]
   gem.description   = %q{Toggles methods from colored gem}
@@ -15,6 +15,6 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
-  gem.add_runtime_dependency "colored", '~> 1.2'
+  gem.add_runtime_dependency "colored", '1.2'
   gem.add_development_dependency "minitest"
 end

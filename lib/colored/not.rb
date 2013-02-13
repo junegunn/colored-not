@@ -1,4 +1,4 @@
-require 'colored'
+raise LoadError, "colored not loaded" unless Object.const_defined?(:Colored)
 
 def Colored!
   String.class_eval do
